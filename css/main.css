@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Fredoka+One);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  background: #edf3f7; }
+
+header {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  header:before, header:after {
+    content: " ";
+    display: table; }
+  header:after {
+    clear: both; }
+  header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4em;
+    color: #7ae8c7; }
+  header input {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.3em;
+    color: #aaa;
+    background: #7ae8c7;
+    margin: 0 0 20px;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center; }
+
+section {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  section:before, section:after {
+    content: " ";
+    display: table; }
+  section:after {
+    clear: both; }
+
+.checked {
+  text-decoration: line-through; }

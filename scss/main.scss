@@ -1,0 +1,50 @@
+//IMPORTS
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Fredoka+One);
+
+//VARIABLES
+$logo: #7AE8C7;
+$bg: #EDF3F7;
+
+html,
+body {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	background: $bg;
+}
+
+header {
+	@include outer-container;
+	text-align: center;
+	h1 {
+		font-family: 'Fredoka One', cursive;
+		font-size: 4em;
+		color: $logo;
+	}
+	input {
+		position: relative;
+		border: none;
+		outline: none; 
+		padding:10px; 
+		font-size:1.3em; 
+		color:#aaa;
+		background: $logo;
+		margin:0 0 20px; 
+		width:40%;
+		border-radius: 10px;
+		text-align: center;
+	}
+}
+
+
+section {
+	@include outer-container;
+	
+	
+}
+
+.checked {
+	text-decoration: line-through;
+}
