@@ -1,24 +1,42 @@
 //IMPORTS
 @import "../bourbon/bourbon";
 @import "../neat/neat";
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Fredoka+One);
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand|Fredoka+One);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
 
 //VARIABLES
 $logo: #7AE8C7;
 $bg: #EDF3F7;
+$list: #efcc75;
 
 html,
 body {
-	font-family: 'PT Sans', sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-size: 1.1em;
 	line-height: 1.5em;
 	background: $bg;
+	color: #666;
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  @include transform (scale(0));
+  @include transition (transform .4s ease-in-out);
+	&:hover {
+		@include transform (scale(1.2));
+	}
 }
 
 header {
 	@include outer-container;
 	text-align: center;
+	img {
+		margin-right: 0.2em;
+		height: 70px;
+		width: auto;
+	}
 	h1 {
+		margin: 40px 0;
 		font-family: 'Fredoka One', cursive;
 		font-size: 4em;
 		color: $logo;
@@ -29,22 +47,87 @@ header {
 		outline: none; 
 		padding:10px; 
 		font-size:1.3em; 
-		color:#aaa;
-		background: $logo;
-		margin:0 0 20px; 
-		width:40%;
+		color:$logo;
+		background: white;
+		margin: 0; 
+		width: 600px;
 		border-radius: 10px;
 		text-align: center;
+		@media screen and (max-width: 650px) { 
+			width:90%;
+		}
+	}
+	p {
+		margin: 0;
+		margin-bottom: 20px;
+		color: #bbb;
+		font-size: 0.6em;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 }
 
 
 section {
 	@include outer-container;
-	
-	
+	text-align: center;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		position: relative;
+		margin: em(5);
+		padding: 20px;
+		padding-top: 30px;
+		height: 240px;
+		width: 300px;
+		background-color: $list;
+		border-radius: 20px;
+		background-image: url(../assets/note-bg.svg);
+		background-repeat: no-repeat;
+		background-size: auto 70px;
+		background-position: right -1px bottom -1px;
+		font-family: 'Gochi Hand', cursive;
+		font-size: 2em;
+		overflow: scroll;
+		@media screen and (max-width: 650px) { 
+			height: 200px;
+		}
+	}
+	button {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 2px;
+		outline: 0;
+		padding: em(5);
+		background: none;
+		border:none;
+		font-size: 1em;
+	}
 }
 
 .checked {
-	text-decoration: line-through;
+	opacity: 0.4;
+	p {
+		text-decoration: line-through;
+	}
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	background-color: $bg;
+	text-align: center;
+	height: 80px;
+	img {
+		padding-top: 10px;
+		height: 70px;
+		width: auto;
+	}
 }

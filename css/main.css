@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Fredoka+One);
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand|Fredoka+One);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,10 +7,28 @@
 
 html,
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 1.1em;
   line-height: 1.5em;
-  background: #edf3f7; }
+  background: #edf3f7;
+  color: #666; }
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out; }
+  [class*="entypo-"]:before:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
 
 header {
   *zoom: 1;
@@ -22,7 +41,12 @@ header {
     display: table; }
   header:after {
     clear: both; }
+  header img {
+    margin-right: 0.2em;
+    height: 70px;
+    width: auto; }
   header h1 {
+    margin: 40px 0;
     font-family: 'Fredoka One', cursive;
     font-size: 4em;
     color: #7ae8c7; }
@@ -32,23 +56,83 @@ header {
     outline: none;
     padding: 10px;
     font-size: 1.3em;
-    color: #aaa;
-    background: #7ae8c7;
-    margin: 0 0 20px;
-    width: 40%;
+    color: #7ae8c7;
+    background: white;
+    margin: 0;
+    width: 600px;
     border-radius: 10px;
     text-align: center; }
+    @media screen and (max-width: 650px) {
+      header input {
+        width: 90%; } }
+  header p {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #bbb;
+    font-size: 0.6em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
 
 section {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center; }
   section:before, section:after {
     content: " ";
     display: table; }
   section:after {
     clear: both; }
+  section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  section li {
+    display: inline-block;
+    position: relative;
+    margin: 0.3125em;
+    padding: 20px;
+    padding-top: 30px;
+    height: 240px;
+    width: 300px;
+    background-color: #efcc75;
+    border-radius: 20px;
+    background-image: url(../assets/note-bg.svg);
+    background-repeat: no-repeat;
+    background-size: auto 70px;
+    background-position: right -1px bottom -1px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2em;
+    overflow: scroll; }
+    @media screen and (max-width: 650px) {
+      section li {
+        height: 200px; } }
+  section button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    outline: 0;
+    padding: 0.3125em;
+    background: none;
+    border: none;
+    font-size: 1em; }
 
 .checked {
-  text-decoration: line-through; }
+  opacity: 0.4; }
+  .checked p {
+    text-decoration: line-through; }
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background-color: #edf3f7;
+  text-align: center;
+  height: 80px; }
+  footer img {
+    padding-top: 10px;
+    height: 70px;
+    width: auto; }

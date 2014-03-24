@@ -1,23 +1,7 @@
-// $(document).ready(function(){
-//     $('#add').click(function() {
-//         var toAdd = $('input[name=checkListItem]').val();
-//         $('.list').append('<li><p class="item">' + toAdd + '</p><button class="delete"></button></li>');
-//         $('input[name=checkListItem]').val(" ");
-//     });
-//     $(document).on('click', '.item', function() {
-//         $(this).toggleClass("checked");
-//     });
-//     $(document).on('click', ".delete", function () {
-//     	$(this).parent().remove();
-//     });
-// });
-
-
-
 function addItem(){
 	var form = $('input[name=checkListItem]')
 	var toAdd = form.val();
-	var newItem = '<li><p class="item">' + toAdd + '</p><button class="delete"></button></li>';
+	var newItem = '<li class="item"><button class="delete entypo-cancel"></button><p>' + toAdd + '</p></li>';
 	if (toAdd == 0) {
 		var l = 20;  
    		for( var i = 0; i < 10; i++ )   
